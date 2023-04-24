@@ -9,13 +9,13 @@ public class Item<T> implements Iterable<Item<T>> {
 	public Item<T> next;
 	
 	public Item(T value, Item<T> next) {
+		System.out.println(String.format("Creating item: %s", value));
 		this.value = value;
 		this.next = next;
 	}
 	
 	public Item<T> printGetNext() {
-		System.out.print(value);
-		System.out.print(next == null ? "\n" : ", ");
+		System.out.printf("%s%s", value, next == null ? "\n" : ", ");
 		return next;
 	}
 	

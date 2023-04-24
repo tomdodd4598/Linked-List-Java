@@ -5,7 +5,6 @@ import java.util.function.*;
 public class Helpers {
 	
 	public static <T> Item<T> insertItem(Item<T> start, T val, BiFunction<T, Item<T>, Boolean> insertBefore) {
-		System.out.println(String.format("Creating item: %s", val));
 		Item<T> current = start, previous = null;
 		
 		while (current != null && !insertBefore.apply(val, current)) {

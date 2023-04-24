@@ -17,12 +17,12 @@ public class Main {
 		return NUMBER_REGEX.matcher(str).matches();
 	}
 	
-	static boolean insertBefore(String val, Item<String> oth) {
-		if (isNumberString(val) && isNumberString(oth.value)) {
-			return new BigInteger(val).compareTo(new BigInteger(oth.value)) < 1;
+	static boolean insertBefore(String val, Item<String> item) {
+		if (isNumberString(val) && isNumberString(item.value)) {
+			return new BigInteger(val).compareTo(new BigInteger(item.value)) < 1;
 		}
 		else {
-			return val.compareTo(oth.value) < 1;
+			return val.compareTo(item.value) < 1;
 		}
 	}
 	
